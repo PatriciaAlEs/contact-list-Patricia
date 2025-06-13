@@ -33,13 +33,13 @@ Esta plantilla viene con un estado general y centralizado que se comparte con to
 
 El archivo `./src/store.js` tiene una estructura predeterminada para el store, te animamos a cambiarla y adaptarla a tus necesidades de datos (por ejemplo, si estás haciendo una `Lista de tareas` probablemente tendrás un arreglo de tareas aquí).
 
-💡Nota: Hay un ejemplo usando el store y dispatcher de useReducer en el archivo `pages/demo.js`;
+💡Nota: Hay un ejemplo usando el store y dispatcher de useReducer en el archivo `pages/AddContact.js`;
 
 + Entiende [como funciona el `useReducer`](https://4geeks.com/es/lesson/que-es-usereducer-react)
 + Lee más sobre [implementar un estado global con API de Contexto](https://4geeks.com/es/lesson/context-api-es)
 + Lee más sobre [hooks de react](https://4geeks.com/es/lesson/react-hooks-explained-es)
 
-El `Proveedor` del store para este contexto ya está configurado en `./src/main.jsx`. Puedes acceder al store desde cualquier componente usando el hook `useGlobalReducer` para obtener el `store` y el `despachador`. Consulta `/views/demo.js` para ver una demostración. Aquí tienes un ejemplo más pequeño:
+El `Proveedor` del store para este contexto ya está configurado en `./src/main.jsx`. Puedes acceder al store desde cualquier componente usando el hook `useGlobalReducer` para obtener el `store` y el `despachador`. Consulta `/views/AddContact.js` para ver una AddContactstración. Aquí tienes un ejemplo más pequeño:
 
 ```jsx
 import useGlobalReducer from "./src/hooks/useGlobalReducer";

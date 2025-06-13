@@ -22,7 +22,7 @@ You can update the `./index.css` or create new `.css` files and import them into
 
 Add more files into your `./src/components` or styles folder as you need them and import them into your current files as needed.
 
-💡Note: There is an example using the Context API inside `pages/demo.js`;
+💡Note: There is an example using the Context API inside `pages/AddContact.js`;
 
 ### Pages
 
@@ -39,7 +39,7 @@ The file `./src/store.js` has a default structure for the store, we encourage yo
 + Read more about [implementing a global state with Context API](https://4geeks.com/lesson/context-api)
 + Read more about [react hooks](https://content.breatheco.de/lesson/react-hooks-explained)
 
-The store `Provider` for this context is already set on `./src/main.jsx`. You can access the store from any component using the `useGlobalReducer` hook to get the `store` and `dispatcher`. Check `/views/demo.js` to see a demo. Here is a smaller sample:
+The store `Provider` for this context is already set on `./src/main.jsx`. You can access the store from any component using the `useGlobalReducer` hook to get the `store` and `dispatcher`. Check `/views/AddContact.js` to see a AddContact. Here is a smaller sample:
 
 ```jsx
 import useGlobalReducer from "./src/hooks/useGlobalReducer";
