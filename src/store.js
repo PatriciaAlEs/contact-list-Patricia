@@ -1,5 +1,5 @@
 export const initialStore=()=>{
-  return{
+  return {
     agenda: null,
     contactos: []
   }
@@ -7,8 +7,8 @@ export const initialStore=()=>{
 
 export default function storeReducer(store, action = {}) {
   switch(action.type){
-    case 'GET_AGENDA':
 
+    case 'GET_AGENDA':
       return {
         ...store,
         agenda: action.payload

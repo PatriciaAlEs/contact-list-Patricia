@@ -12,8 +12,7 @@ export const Home = () => {
 		const getAgendaAsync = async () => {
 			const misContactos = await apiServices.getAgenda();
 			dispatch({ type: 'GET_CONTACTS', payload: misContactos.contacts });
-			console.log(misContactos);
-
+			console.log("Los contactos pedidos desde Home: ", misContactos);
 		}
 		getAgendaAsync()
 	}, [])
