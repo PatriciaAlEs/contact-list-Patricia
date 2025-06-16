@@ -35,4 +35,20 @@ apiServices.createAgenda = async () => {
     }
 }
 
+apiServices.addContact = async (contact) => {
+    try {
+        const response = await fetch('https://playground.4geeks.com/contact/agendas/patri_agenda/contacts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
 
+            }, body: JSON.stringify(contact)
+        })
+        const data = await response.json()
+        console.log("Contacto añadido correctamente:", data)
+        return data
+    } catch (error) {
+        console.log('Error añadiendo contacto', error );
+        
+    }
+}
