@@ -25,7 +25,24 @@ export const AddContact = () => {
     })
   }
 
+  const enviarFormulario = async (e) => {
+    e.preventDefault()
 
+    try {
+      const datos = await apiServices.addContact(miContacto);
+      console.log("Datos del contacto añadido:", datos);
+      dispatch({ type: 'ADD_CONTACT', payload: datos }); 
+    } catch (error) {
+      console.log('Error al añadir el contacto', error);
+    }
+    setMiContacto({
+      name: '',
+      email: '',
+      phone: '',
+      address: ''
+    })
+    navigate('/'); 
+  }
 
 
   return (
