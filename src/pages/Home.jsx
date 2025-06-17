@@ -18,19 +18,21 @@ export const Home = () => {
 	}, [])
 	return (
 		<div className="text-center mt-5">
-			<h1>Hello Contact List!!</h1>
-			
-			<ul>
-				{store.contactos?.map((contacto, index) => (
-					<div key={index} className="card mb-3">
-						<li>Nombre:{contacto.name} </li>
-						<li>Phone:{contacto.phone} </li>
-						<li>Email:{contacto.email} </li>
-						<li>Address:{contacto.address} </li>
-					</div>
+			<div className="contact-list">
+				<h1 className="text-center">📇 Lista de Contactos</h1>
 
+				{store.contactos?.map((contacto, index) => (
+					<div key={index} className="contact-item">
+						<div className="contact-info">
+							<p><strong>Nombre:</strong> {contacto.name}</p>
+							<p><strong>Teléfono:</strong> {contacto.phone}</p>
+							<p><strong>Email:</strong> {contacto.email}</p>
+							<p><strong>Dirección:</strong> {contacto.address}</p>
+						</div>
+					</div>
 				))}
-			</ul>
+			</div>
+
 
 		</div>
 	);

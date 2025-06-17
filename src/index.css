@@ -32,5 +32,37 @@
     color: white;
     font-weight: bold;
     border: none;
-    border-radius: 8px; 
+    border-radius: 8px;
+}
+
+.contact-list {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+.contact-item {
+    background-color: #f9f9f9;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.01);
+}
+
+.contact-info p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-info strong {
+    color: #555;
 }

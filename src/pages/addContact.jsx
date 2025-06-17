@@ -17,41 +17,20 @@ export const AddContact = () => {
     address: ''
   })
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = (e) => { 
     setMiContacto({
       ...miContacto,
-      [e.target.name]: e.target.value
+      [e.target.name] : e.target.value
     })
   }
 
 
 
-  const enviarFormulario = async (e) => {
-    e.preventDefault()
-    try {
-      const response = await apiServices.addContact(miContacto)
-      dispatch({
-        type: 'ADD_CONTACT',
-        payload: response
-      })
-    
-    setMiContacto({
-      name: '',
-      email: '',
-      phone: '',
-      address: ''
-    }
-    )
-    navigate("/")
-    } catch (error) {
-      console.log('Error desde el envio del formulario:', error);
-
-    }
-  }
 
   return (
-    <div className="container">
-      <h2>Aqui ira el formulario para añadir un contacto</h2>
+    <div className="container text-center mt-5">
+      <h2>Agrega un nuevo contacto a tu agenda:</h2>
       <form onSubmit={enviarFormulario} className="contact-form">
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Nombre</label>
@@ -106,9 +85,6 @@ export const AddContact = () => {
 
         <button type="submit" className="btn btn-primary">Agregar contacto</button>
       </form>
-
-      <Link to="/oneContact" >
-        <span className="navbar-brand mb-0 h1">Editar contacto</span></Link>
     </div>
   );
 };
