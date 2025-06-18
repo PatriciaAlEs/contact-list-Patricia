@@ -67,3 +67,4 @@ apiServices.editContact = async (id, nuevosDatos) => {
         console.log('Error editando contacto', error);
     }
 }
+
