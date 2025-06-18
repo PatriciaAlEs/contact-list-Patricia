@@ -50,3 +50,20 @@ apiServices.addContact = async (contacto) => {
         console.log('Error añadiendo contacto', error);
     }
 }
+
+apiServices.editContact = async (id, nuevosDatos) => {
+    try {
+        const response = await fetch(`https://playground.4geeks.com/contact/agendas/patri_agenda/contacts/${id}` , {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(nuevosDatos)
+        })
+        const data = await response.json()
+        console.log("Contacto editado ---> ", data);
+        return data
+    } catch (error) {
+        console.log('Error editando contacto', error);
+    }
+}
