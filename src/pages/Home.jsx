@@ -18,7 +18,16 @@ export const Home = () => {
 		getAgendaAsync()
 	}, [])
 
-
+	const handleDelete = async (id) => {
+		try {
+			const eliminado = await apiServices.deleteContact(id)
+			dispatch({type: 'DELETE_CONTACT', payload: id});
+			console.log("Eliminado --> ", id);
+		} catch (error) {
+			console.log("Error al eliminar el contacto:", error);
+			
+		}
+	}
 
 
 	return (
@@ -35,7 +44,7 @@ export const Home = () => {
 							<p><strong>Dirección:</strong> {contacto.address}</p>
 						</div>
 						<div>
-							<button onClick={handleDelete(contacto.id)}>
+							<button onClick={() => handleDelete(contacto.id)}>
 								<span>❌</span>
 							</button>
 							

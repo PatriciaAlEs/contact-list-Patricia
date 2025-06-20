@@ -2,7 +2,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import useGlobalReducer from "../hooks/useGlobalReducer";
 import { apiServices } from "../services/apiServices";
-import React, { useState} from "react";
+import React, { useState } from "react";
 
 
 export const AddContact = () => {
@@ -18,10 +18,10 @@ export const AddContact = () => {
   })
 
 
-  const handleSubmit = (e) => { 
+  const handleSubmit = (e) => {
     setMiContacto({
       ...miContacto,
-      [e.target.name] : e.target.value
+      [e.target.name]: e.target.value
     })
   }
 
@@ -31,7 +31,7 @@ export const AddContact = () => {
     try {
       const datos = await apiServices.addContact(miContacto);
       console.log("Datos del contacto añadido:", datos);
-      dispatch({ type: 'ADD_CONTACT', payload: datos }); 
+      dispatch({ type: 'ADD_CONTACT', payload: datos });
     } catch (error) {
       console.log('Error al añadir el contacto', error);
     }
@@ -41,7 +41,7 @@ export const AddContact = () => {
       phone: '',
       address: ''
     })
-    navigate('/'); 
+    navigate('/');
   }
 
 
