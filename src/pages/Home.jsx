@@ -35,7 +35,10 @@ export const Home = () => {
 							<p><strong>Dirección:</strong> {contacto.address}</p>
 						</div>
 						<div>
-							<span>❌</span>
+							<button onClick={handleDelete(contacto.id)}>
+								<span>❌</span>
+							</button>
+							
 							<button onClick={() => {navigate(`editContact/${contacto.id}`)}} className="btn btn-outline-secondary">
 								<span>✏️</span>
 							</button>

@@ -68,3 +68,15 @@ apiServices.editContact = async (id, nuevosDatos) => {
     }
 }
 
+apiServices.deleteContact = async (id) => {
+    try {
+        const response = await fetch(`https://playground.4geeks.com/contact/agendas/patri_agenda/contacts/${id}`, {
+            method: 'DELETE'
+        });
+        const data = await response.json();
+        return data
+    } catch (error) {
+        console.log('Error eliminando contacto', error);
+        
+    }
+}

@@ -53,9 +53,7 @@
     transition: transform 0.2s ease;
 }
 
-.contact-item:hover {
-    transform: scale(1.01);
-}
+
 
 .contact-info p {
     margin: 0.3rem 0;

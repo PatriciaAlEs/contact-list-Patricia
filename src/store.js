@@ -25,6 +25,11 @@ export default function storeReducer(store, action = {}) {
         ...store,
         contactos: [...store.contactos, action.payload] // nos actualiza el array de contactos, y nos añade el contacto nuevo (action.payload)
       };
+    case 'DELETE_CONTACT':
+      return{
+        ...store,
+        contactos: store.contactos.filter(contacto => contacto.id !== action.payload) // Devuelve un nuevo array que excluye el contacto cuyo id es igual a action.payload
+      }
     default:
       throw Error('Unknown action.');
   }    
